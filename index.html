@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08111f">
+<meta name="description" content="EthiShield Lab — apprends à détecter, comprends comment protéger. Formation en cybersécurité éthique.">
+<title>EthiShield Lab — Cybersécurité éthique</title>
+<style>
+:root{color-scheme:dark;--bg:#08111f;--panel:#101d30;--panel2:#14243a;--text:#edf4ff;--muted:#a6b7cc;--green:#49e0ad;--blue:#77a9ff;--line:#263a54}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at top right,#152e4a 0,transparent 40%),var(--bg);color:var(--text)}a{color:var(--green)}button,input{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 16px;background:var(--green);color:#062116;font-weight:750}button.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}input{width:100%;padding:12px;border-radius:10px;background:#081321;color:var(--text);border:1px solid var(--line)}.wrap{max-width:1120px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-size:1.15rem;font-weight:850;letter-spacing:.3px}.brand span{color:var(--green)}nav{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}nav button{background:transparent;color:var(--muted);border:1px solid transparent}nav button.active,nav button:hover{color:var(--text);background:var(--panel);border-color:var(--line)}.hero{padding:clamp(24px,5vw,52px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,#122740,#0c1829 70%);margin-bottom:22px}.eyebrow{color:var(--green);text-transform:uppercase;font-weight:800;font-size:.78rem;letter-spacing:1.5px}.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.08;margin:12px 0}.hero p{color:var(--muted);max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.stats,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:20px}.stat{font-size:1.8rem;font-weight:850}.muted{color:var(--muted)}.tag{display:inline-block;color:var(--green);background:#12352f;padding:4px 9px;border-radius:999px;font-size:.78rem}.section-title{margin:28px 0 12px}.card h3{margin-top:8px}.card p{color:var(--muted)}.card a{font-weight:700}.hidden{display:none}.form{max-width:460px;margin:20px auto}.form label{display:block;margin:12px 0 6px}.notice{padding:12px 14px;background:#172c43;border-radius:12px;color:var(--muted);margin:14px 0}footer{border-top:1px solid var(--line);margin-top:36px;padding:22px 0;color:var(--muted);font-size:.9rem}@media(max-width:520px){.wrap{padding:15px}.hero{border-radius:18px}nav{display:grid;grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand">🛡️ EthiShield <span>Lab</span></div><div id="authStatus" class="muted">Mode découverte</div></header>
+<nav aria-label="Navigation principale"><button class="active" data-page="home">Vue d'ensemble</button><button data-page="courses">Mes cours</button><button data-page="lab">Laboratoire</button><button data-page="account">Compte</button></nav>
+<main>
+<section id="home" class="page">
+<div class="hero"><div class="eyebrow">Ton laboratoire d'apprentissage</div><h1>Apprends à détecter.<br>Comprends comment protéger.</h1><p>Un parcours guidé en cybersécurité éthique : cours progressifs, ressources pratiques et réflexes défensifs pour développer tes compétences en toute responsabilité.</p><div class="actions"><button data-goto="courses">Explorer les cours →</button><button class="secondary" data-goto="account">Créer un compte</button></div></div>
+<div class="stats"><div class="card"><div class="muted">Points d'expérience</div><div class="stat" id="xp">0 XP</div><div class="muted">Le suivi des XP sera activé avec le backend sécurisé.</div></div><div class="card"><div class="muted">Parcours</div><div class="stat">5</div><div class="muted">Domaines pour débuter</div></div><div class="card"><div class="muted">Objectif</div><div class="stat">Défense</div><div class="muted">Apprendre légalement et protéger</div></div></div>
+<h2 class="section-title">Commence ton parcours</h2><div id="featured" class="grid"></div>
+</section>
+<section id="courses" class="page hidden"><h1>Mes cours</h1><p class="muted">Choisis un thème, lis les objectifs et pratique uniquement dans des environnements autorisés.</p><div id="courseList" class="grid"></div><div class="notice" id="courseNotice">Le catalogue ci-dessous est un catalogue de démarrage. Connecte Supabase et configure tes tables pour charger le contenu publié depuis la base.</div></section>
+<section id="lab" class="page hidden"><h1>Laboratoire défensif</h1><p class="muted">Des ressources d'entraînement prévues pour apprendre dans un cadre contrôlé.</p><div class="grid"><article class="card"><span class="tag">Linux</span><h3>OverTheWire: Bandit</h3><p>Apprends les bases de la ligne de commande, les fichiers et les permissions à travers des niveaux pédagogiques.</p><a href="https://overthewire.org/wargames/bandit/" target="_blank" rel="noopener noreferrer">Ouvrir Bandit ↗</a></article><article class="card"><span class="tag">Sécurité web</span><h3>OWASP Juice Shop</h3><p>Application volontairement vulnérable conçue pour la formation et les exercices autorisés.</p><a href="https://owasp.org/www-project-juice-shop/" target="_blank" rel="noopener noreferrer">Découvrir Juice Shop ↗</a></article><article class="card"><span class="tag">Méthode</span><h3>Audit responsable</h3><p>Définis le périmètre, obtiens l'autorisation, limite l'impact et documente les observations vérifiables.</p></article></div><div class="notice">Ce laboratoire ne lance aucun scan réseau ni test d'intrusion. Les audits réels nécessitent une implémentation dédiée et une autorisation explicite.</div></section>
+<section id="account" class="page hidden"><h1>Compte</h1><p class="muted">Connecte-toi ou crée un compte si la configuration Supabase est activée.</p><form id="authForm" class="card form"><label for="email">Adresse e-mail</label><input id="email" type="email" autocomplete="email" required placeholder="toi@exemple.com"><label for="password">Mot de passe</label><input id="password" type="password" autocomplete="current-password" minlength="6" required placeholder="6 caractères minimum"><div class="actions"><button type="submit">Se connecter</button><button type="button" class="secondary" id="signup">Créer un compte</button></div><p id="authMessage" class="muted" role="status">Configure les variables Supabase dans le code pour activer l'authentification.</p><button type="button" class="secondary hidden" id="logout">Se déconnecter</button></form><div class="notice">La clé publishable Supabase peut être utilisée côté navigateur si les règles RLS sont bien configurées. Ne mets jamais une clé service_role dans ce fichier.</div></section>
+</main>
+<footer>© <span id="year"></span> EthiShield Lab · Apprentissage éthique, responsable et légal.</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://xxmuhfqqbhqoqzmbphpn.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_Vp9qUjxrkx5PUks3t5D0JQ_EAFdlff0";
+const courses = [
+{title:"Linux & Termux",level:"Débutant",icon:"⌘",desc:"Terminal, fichiers, permissions et commandes essentielles."},
+{title:"Réseaux et DNS",level:"Débutant",icon:"⌁",desc:"Comprendre les adresses IP, les noms de domaine et la résolution DNS."},
+{title:"Sécurité Web",level:"Débutant",icon:"◎",desc:"HTTPS, cookies, en-têtes HTTP et risques web courants."},
+{title:"Python défensif",level:"Intermédiaire",icon:"⌘",desc:"Automatiser des vérifications simples et analyser les résultats."},
+{title:"Cryptographie",level:"Débutant",icon:"◇",desc:"Découvrir le hachage, le chiffrement et la gestion des clés."}
+];
+const courseCard=c=>'<article class="card"><span class="tag">'+c.level+'</span><h3>'+c.icon+' '+c.title+'</h3><p>'+c.desc+'</p><button class="secondary" data-course="'+c.title+'">Voir le parcours</button></article>';
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('courseList').innerHTML=courses.map(courseCard).join('');
+document.getElementById('featured').innerHTML=courses.slice(0,3).map(courseCard).join('');
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.goto)));
+document.addEventListener('click',e=>{const b=e.target.closest('[data-course]');if(b)alert('Parcours : '+b.dataset.course+'\nLe contenu détaillé sera disponible lorsque les leçons seront configurées dans Supabase.');});
+let client=null;
+try{if(window.supabase && SUPABASE_URL.startsWith('https://') && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_'))client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);}catch(e){console.warn('Supabase non initialisé',e);}
+const msg=document.getElementById('authMessage');
+async function auth(mode){if(!client){msg.textContent='Supabase ne peut pas être initialisé. Vérifie l’URL et la clé publishable.';return;}const email=document.getElementById('email').value;const password=document.getElementById('password').value;msg.textContent='Connexion en cours…';try{const result=mode==='signup'?await client.auth.signUp({email,password}):await client.auth.signInWithPassword({email,password});if(result.error)throw result.error;msg.textContent=mode==='signup'?'Compte créé. Vérifie ton e-mail si la confirmation est demandée.':'Connexion réussie.';await refreshAuth();}catch(e){msg.textContent=e.message||'Une erreur est survenue.';}}
+document.getElementById('authForm').addEventListener('submit',e=>{e.preventDefault();auth('login');});
+document.getElementById('signup').addEventListener('click',()=>auth('signup'));
+async function refreshAuth(){if(!client)return;const {data}=await client.auth.getSession();const user=data.session?.user;document.getElementById('authStatus').textContent=user?'Connecté : '+user.email:'Mode découverte';document.getElementById('logout').classList.toggle('hidden',!user);}
+document.getElementById('logout').addEventListener('click',async()=>{if(client){await client.auth.signOut();msg.textContent='Tu es déconnecté.';await refreshAuth();}});
+if(client){refreshAuth();client.auth.onAuthStateChange(()=>refreshAuth());}
+</script>
+</body>
+</html>
